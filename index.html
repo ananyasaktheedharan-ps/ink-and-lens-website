@@ -11,27 +11,18 @@ body{font-family:'Segoe UI',sans-serif;background:#111;color:#fff;}
 
 /* HEADER */
 header{
-background:#111;
-color:white;
-padding:18px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+background:#111;color:white;padding:18px 60px;
+display:flex;justify-content:space-between;align-items:center;
 position:sticky;top:0;z-index:1000;
 }
-nav a{
-color:white;text-decoration:none;margin-left:25px;position:relative;
-}
-nav a::after{
-content:"";position:absolute;width:0;height:2px;background:#ff4b2b;
-left:0;bottom:-5px;transition:0.3s;
-}
+nav a{color:white;text-decoration:none;margin-left:25px;position:relative;}
+nav a::after{content:"";position:absolute;width:0;height:2px;background:#ff4b2b;
+left:0;bottom:-5px;transition:0.3s;}
 nav a:hover::after{width:100%;}
 
 /* HERO */
 .hero{
-height:100vh;
-display:flex;flex-direction:column;justify-content:center;align-items:center;
+height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
 text-align:center;color:white;padding:20px;
 background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
 url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
@@ -44,9 +35,7 @@ color:white;border-radius:6px;font-size:16px;cursor:pointer;transition:0.3s;}
 .btn:hover{background:#e33a1d;transform:scale(1.08);}
 
 /* SECTIONS */
-section{padding:90px 60px;opacity:0;transform:translateY(40px);
-transition:all 0.8s ease;}
-section.show{opacity:1;transform:translateY(0);}
+section{padding:90px 60px;opacity:1;transform:translateY(0);transition:all 0.8s ease;}
 .section-title{text-align:center;font-size:40px;margin-bottom:50px;}
 
 /* SLIDER */
