@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Ink & Lens | Creative Media Solutions</title>
 
 <style>
@@ -12,13 +11,13 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-family:'Segoe UI',sans-serif;
 background:#f6f6f6;
 color:#333;
-line-height:1.6;
 }
 
 /* HEADER */
@@ -35,15 +34,10 @@ top:0;
 z-index:1000;
 }
 
-header h2{
-letter-spacing:1px;
-}
-
 nav a{
 color:white;
 text-decoration:none;
 margin-left:25px;
-font-size:15px;
 transition:0.3s;
 }
 
@@ -51,7 +45,7 @@ nav a:hover{
 color:#ff4b2b;
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero{
 background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
@@ -70,21 +64,25 @@ padding:20px;
 }
 
 .hero h1{
-font-size:52px;
+font-size:50px;
 margin-bottom:15px;
+animation:fadeDown 1.2s ease;
 }
 
 .hero p{
-font-size:20px;
 max-width:700px;
+font-size:20px;
+animation:fadeUp 1.4s ease;
 }
+
+/* BUTTON */
 
 .btn{
 margin-top:25px;
 padding:14px 30px;
 background:#ff4b2b;
-color:white;
 border:none;
+color:white;
 border-radius:6px;
 font-size:16px;
 cursor:pointer;
@@ -93,13 +91,21 @@ transition:0.3s;
 
 .btn:hover{
 background:#e33a1d;
-transform:scale(1.05);
+transform:scale(1.08);
 }
 
 /* SECTIONS */
 
 section{
 padding:70px 90px;
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .section-title{
@@ -125,12 +131,8 @@ transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 10px 25px rgba(0,0,0,0.12);
-}
-
-.card h3{
-margin-bottom:10px;
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* STATS */
@@ -146,7 +148,6 @@ flex-wrap:wrap;
 .stat h2{
 color:#ff4b2b;
 font-size:42px;
-margin-bottom:5px;
 }
 
 /* CONTACT */
@@ -157,10 +158,6 @@ color:white;
 text-align:center;
 }
 
-.contact p{
-margin:8px 0;
-}
-
 /* FOOTER */
 
 footer{
@@ -168,10 +165,21 @@ background:black;
 color:#aaa;
 text-align:center;
 padding:18px;
-font-size:14px;
 }
 
-/* MOBILE RESPONSIVE */
+/* ANIMATIONS */
+
+@keyframes fadeDown{
+from{opacity:0; transform:translateY(-40px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(40px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -189,10 +197,6 @@ font-size:36px;
 
 section{
 padding:60px 25px;
-}
-
-.stats{
-gap:40px;
 }
 
 }
@@ -221,9 +225,8 @@ gap:40px;
 <h1>Creative Media That Builds Your Brand</h1>
 
 <p>
-We provide professional photography, videography, editing,
-and website development that help businesses create a powerful
-digital presence.
+Professional photography, videography, editing,
+and website solutions that help businesses grow online.
 </p>
 
 <button class="btn">Get Started</button>
@@ -250,10 +253,9 @@ digital presence.
 </div>
 
 <p style="text-align:center;margin-top:30px;font-size:18px;">
-Many businesses and creators struggle to maintain a strong
-digital presence with consistent high-quality media.
-Ink & Lens solves this problem by delivering professional
-creative solutions that improve engagement and brand growth.
+Many businesses struggle to maintain a professional digital presence.
+Ink & Lens provides creative media services that improve engagement
+and brand visibility.
 </p>
 
 </section>
@@ -267,22 +269,22 @@ creative solutions that improve engagement and brand growth.
 
 <div class="card">
 <h3>Photography</h3>
-<p>Professional product, brand, and event photography.</p>
+<p>Professional product and event photography.</p>
 </div>
 
 <div class="card">
 <h3>Videography</h3>
-<p>High-quality promotional videos and social media reels.</p>
+<p>Promotional videos and social media reels.</p>
 </div>
 
 <div class="card">
 <h3>Media Editing</h3>
-<p>Professional photo and video editing for engaging content.</p>
+<p>High-quality photo and video editing.</p>
 </div>
 
 <div class="card">
 <h3>Website Development</h3>
-<p>Modern responsive websites for your business.</p>
+<p>Modern responsive business websites.</p>
 </div>
 
 </div>
@@ -298,22 +300,22 @@ creative solutions that improve engagement and brand growth.
 
 <div class="card">
 <h3>Creative Storytelling</h3>
-<p>We turn your ideas into powerful visual stories.</p>
+<p>We turn ideas into engaging visual stories.</p>
 </div>
 
 <div class="card">
 <h3>Professional Quality</h3>
-<p>We use modern tools to deliver high-quality media.</p>
+<p>Modern tools for high-quality production.</p>
 </div>
 
 <div class="card">
 <h3>Complete Solutions</h3>
-<p>Photography, videography, editing, and websites in one place.</p>
+<p>All media services in one place.</p>
 </div>
 
 <div class="card">
 <h3>Startup Friendly</h3>
-<p>Affordable solutions for creators and small businesses.</p>
+<p>Affordable solutions for creators.</p>
 </div>
 
 </div>
@@ -326,7 +328,7 @@ creative solutions that improve engagement and brand growth.
 <h2 class="section-title">Get In Touch</h2>
 
 <p>Email: inkandlens@gmail.com</p>
-<p>Phone: +91 99865 78546</p>
+<p>Phone: +91 XXXXX XXXXX</p>
 
 <button class="btn">Contact Us</button>
 
@@ -338,6 +340,31 @@ creative solutions that improve engagement and brand growth.
 © 2026 Ink & Lens | Creative Media Solutions
 
 </footer>
+
+
+<script>
+
+/* SCROLL ANIMATION */
+
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+
+sections.forEach(section => {
+
+const sectionTop = section.getBoundingClientRect().top;
+
+if(sectionTop < window.innerHeight - 100){
+
+section.classList.add("show");
+
+}
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
