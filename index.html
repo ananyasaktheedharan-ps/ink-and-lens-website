@@ -3,210 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ink & Lens</title>
+<title>Ink & Lens | Creative Media Solutions</title>
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI',sans-serif;background:#f9f9f9;color:#333;line-height:1.6;}
 
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#f5f5f5;
-color:#333;
-}
-
+/* HEADER */
 header{
-background:#111;
-color:white;
-padding:15px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+background:#111;color:white;padding:20px 60px;
+display:flex;justify-content:space-between;align-items:center;
 }
+nav a{color:white;text-decoration:none;margin-left:25px;transition:0.3s;}
+nav a:hover{color:#ff4b2b;}
 
-header h2{
-margin:0;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-font-size:14px;
-}
-
+/* HERO */
 .hero{
-height:85vh;
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url("https://images.unsplash.com/photo-1492724441997-5dc865305da7");
-background-size:cover;
-background-position:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-color:white;
-text-align:center;
-padding:20px;
+height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+text-align:center;color:white;padding:20px;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+background-size:cover;background-position:center;
+}
+.hero h1{font-size:48px;margin-bottom:20px;}
+.hero p{max-width:700px;font-size:20px;color:#ddd;}
+.btn{margin-top:25px;padding:14px 30px;background:#ff4b2b;border:none;
+color:white;border-radius:6px;font-size:16px;cursor:pointer;transition:0.3s;}
+.btn:hover{background:#e33a1d;transform:scale(1.05);}
+
+/* SECTION */
+section{padding:70px 60px;}
+.section-title{text-align:center;font-size:32px;margin-bottom:40px;}
+
+/* SERVICES */
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
+.card{background:white;padding:28px;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,0.08);}
+.card h3{margin-bottom:10px;color:#ff4b2b;}
+
+/* GALLERY */
+.slider{width:100%;max-width:900px;margin:auto;overflow:hidden;border-radius:10px;}
+.slides{display:flex;width:400%;animation:slide 16s infinite;}
+.slides img,.slides video{width:100%;flex-shrink:0;}
+@keyframes slide{
+0%{transform:translateX(0);}20%{transform:translateX(0);}
+25%{transform:translateX(-100%);}45%{transform:translateX(-100%);}
+50%{transform:translateX(-200%);}70%{transform:translateX(-200%);}
+75%{transform:translateX(-300%);}95%{transform:translateX(-300%);}
+100%{transform:translateX(0);}
 }
 
-.hero h1{
-font-size:48px;
-margin-bottom:10px;
-}
+/* CONTACT */
+.contact{background:#111;color:white;text-align:center;padding:60px;}
+.contact p{margin:10px 0;}
 
-.hero p{
-font-size:18px;
-max-width:600px;
-}
+/* FOOTER */
+footer{background:black;color:#aaa;text-align:center;padding:18px;}
 
-.btn{
-margin-top:20px;
-padding:12px 25px;
-background:#ff4b2b;
-border:none;
-color:white;
-font-size:16px;
-border-radius:4px;
-cursor:pointer;
+/* MOBILE */
+@media(max-width:768px){
+.hero h1{font-size:32px;}
+.hero p{font-size:16px;}
+section{padding:50px 25px;}
 }
-
-section{
-padding:60px 80px;
-}
-
-.section-title{
-text-align:center;
-font-size:30px;
-margin-bottom:40px;
-}
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:8px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.card h3{
-margin-top:0;
-}
-
-.about{
-text-align:center;
-font-size:18px;
-max-width:800px;
-margin:auto;
-}
-
-.contact{
-background:#111;
-color:white;
-text-align:center;
-}
-
-footer{
-background:#000;
-color:#aaa;
-text-align:center;
-padding:15px;
-font-size:14px;
-}
-
 </style>
 </head>
-
 <body>
 
 <header>
-
 <h2>Ink & Lens</h2>
-
 <nav>
 <a href="#">Home</a>
 <a href="#services">Services</a>
-<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
 </nav>
-
 </header>
 
 <section class="hero">
-
-<h1>Creative Media That Builds Your Brand</h1>
-
-<p>
-Photography, videography, editing, and website solutions
-to help businesses grow their digital presence.
-</p>
-
+<h1>Creative Media That Inspires</h1>
+<p>High-quality photography, videography, editing, and web solutions that help your brand shine online.</p>
 <button class="btn">Get Started</button>
-
-</section>
-
-<section id="about">
-
-<h2 class="section-title">About Us</h2>
-
-<p class="about">
-Ink & Lens is a creative media venture providing professional photography,
-videography, editing, and website development services.  
-We help small businesses and creators build a strong online presence
-through high-quality visual storytelling and modern digital platforms.
-</p>
-
 </section>
 
 <section id="services">
-
 <h2 class="section-title">Our Services</h2>
-
 <div class="services">
-
-<div class="card">
-<h3>Photography</h3>
-<p>Professional product, brand, and event photography.</p>
+<div class="card"><h3>Photography</h3><p>Product & event photography.</p></div>
+<div class="card"><h3>Videography</h3><p>Promotional videos & reels.</p></div>
+<div class="card"><h3>Editing</h3><p>High-quality photo & video editing.</p></div>
+<div class="card"><h3>Web Development</h3><p>Modern responsive websites.</p></div>
 </div>
+</section>
 
-<div class="card">
-<h3>Videography</h3>
-<p>Promotional videos, reels, and storytelling content.</p>
+<section id="gallery">
+<h2 class="section-title">Our Work</h2>
+<div class="slider">
+<div class="slides">
+<img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Photography Sample">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Videography Sample">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Editing Sample">
+<video controls>
+<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 </div>
-
-<div class="card">
-<h3>Media Editing</h3>
-<p>High-quality photo and video editing for social media.</p>
 </div>
-
-<div class="card">
-<h3>Website Development</h3>
-<p>Responsive websites for businesses and creators.</p>
-</div>
-
-</div>
-
 </section>
 
 <section id="contact" class="contact">
-
-<h2 class="section-title">Contact Us</h2>
-
+<h2 class="section-title">Get In Touch</h2>
 <p>Email: inkandlens@gmail.com</p>
 <p>Phone: +91 XXXXX XXXXX</p>
-
-<button class="btn">Send Message</button>
-
+<button class="btn">Contact Us</button>
 </section>
 
 <footer>
-
 © 2026 Ink & Lens | Creative Media Solutions
-
 </footer>
 
 </body>
